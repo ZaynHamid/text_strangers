@@ -10,11 +10,16 @@ async function create(formData) {
   });
 }
 
+const getData = async () => {
+  res = await fetch('https://text-strangers.vercel.app/api/messages')
+  const data = res.json()
+  return data
+}
 
 const TextBox = async () => {    
   await connectDB()
 
-  const data = await Message.find()
+  const {data} = await getData()
 
   return (
     <>
