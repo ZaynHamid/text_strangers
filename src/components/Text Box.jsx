@@ -9,12 +9,6 @@ async function create(formData) {
   });
 }
 
-const getData = async () => {
-  const res = await fetch('http://localhost:3000/api/messages');
-  const data = await res.json();
-  return data;
-}
-
 const TextBox = async () => {    
   await connectDB();
 
