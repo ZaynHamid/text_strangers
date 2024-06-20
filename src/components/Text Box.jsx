@@ -11,6 +11,9 @@ async function create(formData) {
 
 const getData = async () => {
   const res = await fetch('http://localhost:3000/api/messages');
+  if (!res.ok){
+    console.log("nope!")
+  }
   const data = await res.json();
   return data;
 }
