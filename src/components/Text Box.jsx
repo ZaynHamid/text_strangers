@@ -9,16 +9,16 @@ async function create(formData) {
   });
 }
 
-const getData = async () => {
-  const res = await fetch('http://localhost:3000/api/messages');
-  const data = await res.json();
-  return data;
-}
+// const getData = async () => {
+//   const res = await fetch('http://localhost:3000/api/messages');
+//   const data = await res.json();
+//   return data;
+// }
 
 const TextBox = async () => {    
   await connectDB();
 
-  const data = await getData();
+  const data = await Message.find()
 
   return (
     <>
@@ -28,7 +28,7 @@ const TextBox = async () => {
           <input type="submit" value={'Submit'} className='border-2 mx-4 px-4 rounded-xl hover:bg-white cursor-pointer hover:text-black' />
         </form>
       </div>
-      {data.mesasage.map((val, i) => (
+      {data.map((val, i) => (
         <p key={i}>{val.message}</p>
       ))}
     </>
