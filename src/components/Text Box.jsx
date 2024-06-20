@@ -10,11 +10,18 @@ async function create(formData) {
   });
 }
 
+const getData = async () => {
+  const res = await fetch('https://text-strangers.vercel.app/api/messages')
+  const data = await res.json()
+  return data
+}
 
 const TextBox = async () => {    
   await connectDB()
 
-  const data = await Message.find()
+  const data = await getData()
+
+
 
   return (
     <>
@@ -26,7 +33,7 @@ const TextBox = async () => {
         </form>
     
     </div>
-    {data.map((val, i) => (
+    {data.mesasage.map((val, i) => (
         <p  key={i}>{val.message}</p>
       ))}
     </>

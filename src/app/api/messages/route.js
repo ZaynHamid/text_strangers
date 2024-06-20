@@ -15,15 +15,15 @@ export async function GET(req) {
 }
 
 
-export async function POST(req) {
-    const data = await req.json()
-    try {
-     await connectDB()  
+// export async function POST(req) {
+//     const data = await req.json()
+//     try {
+//      await connectDB()  
     
-    const result = await Message.create(data)
-    return NextResponse.json({'mesasage': 'Data sent!', 'data': result}, {status: 201})
-    }catch(err) {
-        return NextResponse.json({'mesasage': 'Something went wrong, es tut mir lied!'})
-        }
+//     const result = await Message.create(data)
+//     return NextResponse.json({'mesasage': 'Data sent!', 'data': result}, {status: 201})
+//     }catch(err) {
+//         return NextResponse.json({'mesasage': 'Something went wrong, es tut mir lied!'})
+//         }
    
-}
+// }
