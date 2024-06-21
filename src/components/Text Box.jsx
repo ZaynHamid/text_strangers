@@ -11,9 +11,6 @@ async function create(formData) {
 
 
 const TextBox = async () => {    
-  await connectDB();
-  const data = await Message.find()
-
   return (
     <>
       <div className='flex items-center gap-4'>
@@ -22,9 +19,7 @@ const TextBox = async () => {
           <input type="submit" value={'Submit'} className='border-2 mx-4 px-4 rounded-xl hover:bg-white cursor-pointer hover:text-black' />
         </form>
       </div>
-      {data.map((val, i) => (
-        <p key={i}>{val.message}</p>
-      ))}
+    
     </>
   );
 }
