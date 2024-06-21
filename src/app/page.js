@@ -7,6 +7,7 @@ export default function Home() {
     <main className="flex gap-10 flex-col items-center justify-between p-24">
       <TextBox />
       <Users/>
+  
     </main>
   );
 }

@@ -10,15 +10,19 @@ async function create(formData) {
 }
 
 
-const TextBox = async () => {    
+const TextBox = async () => { 
+
   return (
     <>
       <div className='flex items-center gap-4'>
         <form action={create}>
           <input type="text" name="message" className='text-black px-4 py-1 outline-none rounded-xl' placeholder='Message' />
           <input type="submit" value={'Submit'} className='border-2 mx-4 px-4 rounded-xl hover:bg-white cursor-pointer hover:text-black' />
+               
         </form>
+        
       </div>
+
     
     </>
   );

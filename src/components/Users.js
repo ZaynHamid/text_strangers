@@ -6,7 +6,7 @@ const Users =  async () => {
     const data = await Message.find() 
   return (
     <div>  {data.map((val, i) => (
-        <p key={i}>{val.message}</p>
+        <p key={i} className="text-center">{val.message}</p>
       ))}</div>
   )
 }
