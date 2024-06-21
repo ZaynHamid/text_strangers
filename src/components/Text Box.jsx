@@ -9,9 +9,9 @@ async function create(formData) {
   });
 }
 
+
 const TextBox = async () => {    
   await connectDB();
-
   const data = await Message.find()
 
   return (
