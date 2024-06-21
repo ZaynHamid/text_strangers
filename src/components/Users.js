@@ -1,5 +1,3 @@
-'use client'
-
 import connectDB from "@/lib/connectDB"
 import Message from "@/models/texts"
 
